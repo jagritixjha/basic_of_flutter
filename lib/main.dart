@@ -123,7 +123,7 @@ void main() {
             style: TextStyle(
                 color: Colors.lightGreen,
                 fontWeight: FontWeight.bold,
-                fontSize: 40),
+                fontSize: 24),
           ),
         ]),
       )),
