@@ -10,12 +10,15 @@ void main() {
           leading: const Icon(Icons.menu),
           centerTitle: true,
           backgroundColor: Colors.redAccent,
-          title: const Text("Flutter App", style: TextStyle(fontWeight: FontWeight.bold)),
+          title: const Text("Flutter App",
+              style: TextStyle(fontWeight: FontWeight.bold)),
           foregroundColor: Colors.white,
         ),
-        body: Center(
-          child: Text('Red & White Group of Institutes\nOne Step in Changing Education Chain...',
-              style: TextStyle(color: Colors.redAccent, fontSize: 20), textAlign: TextAlign.center),
+        body: const Center(
+          child: Text(
+              'Red & White Group of Institutes\nOne Step in Changing Education Chain...',
+              style: TextStyle(color: Colors.redAccent, fontSize: 20),
+              textAlign: TextAlign.center),
         ),
       ),
     ),
