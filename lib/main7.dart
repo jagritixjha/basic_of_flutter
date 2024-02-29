@@ -19,7 +19,6 @@ class HomeScreen extends StatelessWidget {
         elevation: 6,
         shadowColor: Colors.green,
         title: const Text(
-          textDirection: TextDirection.ltr,
           'Launch Button',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
         ),
