@@ -1,6 +1,6 @@
 <table style="border-collapse: collapse; width: 100%;">
 <tr>
-<th colspan="4" style="text-align: center; border: 0;">Outputs of the programs</th>
+<th colspan="4" style="text-align: center; border: 0;">Screenshots</th>
 </tr>
 <tr>
 <td style="width: 220px; border: 0;">
