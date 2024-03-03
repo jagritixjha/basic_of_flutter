@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.brown.shade800,
+          backgroundColor: Colors.brown.shade900,
           title: const Text(
             'SPLITTER',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),

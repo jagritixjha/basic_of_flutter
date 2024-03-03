@@ -18,11 +18,11 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.lightGreen,
         elevation: 6,
         shadowColor: Colors.green,
+        centerTitle: true,
         title: const Text(
           'Launch Button',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
         ),
-        centerTitle: true,
       ),
       body: Center(
         child: Container(
@@ -38,9 +38,10 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
             border: Border.all(
-                color: Colors.lightGreen.shade200,
-                width: 2,
-                strokeAlign: BorderSide.strokeAlignOutside),
+              color: Colors.lightGreen.shade200,
+              width: 2,
+              strokeAlign: BorderSide.strokeAlignOutside,
+            ),
           ),
           child: const Center(
             child: Text(

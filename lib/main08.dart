@@ -16,14 +16,15 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.yellow.shade700,
       appBar: AppBar(
         backgroundColor: Colors.black,
+        centerTitle: true,
         title: const Text(
           'BOLT',
           style: TextStyle(
-              letterSpacing: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.w700),
+            letterSpacing: 20,
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+          ),
         ),
-        centerTitle: true,
       ),
       body: Center(
         child: Container(
