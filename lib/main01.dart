@@ -10,19 +10,19 @@ void main() {
         title: RichText(
             text: TextSpan(
                 style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                const TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 children: [
-              WidgetSpan(
-                  child: Image.asset(
-                "assets/images/bag.png",
-                height: 40,
-              )),
-              const WidgetSpan(child: SizedBox(width: 6, height: 30)),
-              const TextSpan(
-                text: 'List of Fruits',
-                style: TextStyle(color: Colors.white, letterSpacing: 1),
-              ),
-            ])),
+                  WidgetSpan(
+                      child: Image.asset(
+                        "assets/images/bag.png",
+                        height: 40,
+                      )),
+                  const WidgetSpan(child: SizedBox(width: 6, height: 30)),
+                  const TextSpan(
+                    text: 'List of Fruits',
+                    style: TextStyle(color: Colors.white, letterSpacing: 1),
+                  ),
+                ])),
       ),
       body: Center(
         child: RichText(
@@ -115,9 +115,9 @@ void main() {
             const TextSpan(
               text: 'Pineapple\n',
               style: TextStyle(
-                  color: Colors.orange,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24),
+                color: Colors.orange,
+                fontWeight: FontWeight.bold,
+                fontSize: 24,),
             ),
             WidgetSpan(
               child: Image.asset(
