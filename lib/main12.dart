@@ -11,6 +11,8 @@ enum Genders { male, female, other }
 
 class RadioButtonScreenState extends State<RadioButtonScreen> {
   bool isOn = false;
+  bool isDark = false;
+  bool isLight = false;
   Genders genderSelected = Genders.male;
 
   @override
@@ -25,7 +27,9 @@ class RadioButtonScreenState extends State<RadioButtonScreen> {
             value: isOn,
             // groupValue: isOn,
             onChanged: (value) {
-              setState(() {});
+              setState(() {
+                isOn = !isOn;
+              });
             },
           ),
           Radio(
@@ -64,35 +68,30 @@ class RadioButtonScreenState extends State<RadioButtonScreen> {
             title: const Text('Others'),
           ),
           Switch(
-            value: isOn,
-            thumbColor: MaterialStatePropertyAll(
-              Colors.purple.shade800,
-            ),
+            value: isDark,
             thumbIcon: MaterialStatePropertyAll(
-              isOn == true
+              isDark == true
                   ? const Icon(
-                      Icons.check_circle_outline_rounded,
-                      color: Colors.white,
-                      size: 34,
+                      Icons.check,
+                      size: 20,
                     )
                   : const Icon(
-                      Icons.radio_button_unchecked_rounded,
-                      size: 24,
-                      color: Colors.white,
+                      Icons.close,
+                      size: 20,
                     ),
             ),
             onChanged: (value) {
               setState(() {
-                isOn = !isOn;
+                isDark = !isDark;
               });
             },
           ),
           Switch.adaptive(
             applyCupertinoTheme: true,
-            value: isOn,
+            value: isLight,
             onChanged: (value) {
               setState(() {
-                isOn = !isOn;
+                isLight = !isLight;
               });
             },
           )
