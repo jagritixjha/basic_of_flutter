@@ -28,7 +28,7 @@ class RadioButtonScreenState extends State<RadioButtonScreen> {
             // groupValue: isOn,
             onChanged: (value) {
               setState(() {
-                isOn = !isOn;
+                isOn = value!;
               });
             },
           ),
