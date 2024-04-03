@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  return runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: HomeScreen(),
-  ));
+  return runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+    ),
+  );
 }
 
 class HomeScreen extends StatelessWidget {
