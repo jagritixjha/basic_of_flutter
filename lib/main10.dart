@@ -26,83 +26,84 @@ class HomeScreen extends StatelessWidget {
         body: Column(
           children: [
             Expanded(
-                child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: Container(
-                color: Colors.yellow.shade800,
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        height: 80,
-                        width: MediaQuery.of(context).size.width - 20,
-                        color: Colors.yellow.shade600,
-                        child: const Text(
-                          '1',
-                          style: TextStyle(
-                            fontSize: 25,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                child: Container(
+                  color: Colors.yellow.shade800,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          height: 80,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.yellow.shade600,
+                          child: const Text(
+                            '1',
+                            style: TextStyle(
+                              fontSize: 25,
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(height: 16),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 80,
-                        width: MediaQuery.of(context).size.width - 20,
-                        color: Colors.yellow.shade600,
-                        child: const Text(
-                          '2',
-                          style: TextStyle(
-                            fontSize: 25,
+                        const SizedBox(height: 16),
+                        Container(
+                          alignment: Alignment.center,
+                          height: 80,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.yellow.shade600,
+                          child: const Text(
+                            '2',
+                            style: TextStyle(
+                              fontSize: 25,
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(height: 16),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 80,
-                        width: MediaQuery.of(context).size.width - 20,
-                        color: Colors.yellow.shade600,
-                        child: const Text(
-                          '3',
-                          style: TextStyle(
-                            fontSize: 25,
+                        const SizedBox(height: 16),
+                        Container(
+                          alignment: Alignment.center,
+                          height: 80,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.yellow.shade600,
+                          child: const Text(
+                            '3',
+                            style: TextStyle(
+                              fontSize: 25,
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(height: 16),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 80,
-                        width: MediaQuery.of(context).size.width - 20,
-                        color: Colors.yellow.shade600,
-                        child: const Text(
-                          '4',
-                          style: TextStyle(
-                            fontSize: 25,
+                        const SizedBox(height: 16),
+                        Container(
+                          alignment: Alignment.center,
+                          height: 80,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.yellow.shade600,
+                          child: const Text(
+                            '4',
+                            style: TextStyle(
+                              fontSize: 25,
+                            ),
                           ),
                         ),
-                      ),
-                      const SizedBox(height: 16),
-                      Container(
-                        alignment: Alignment.center,
-                        height: 80,
-                        width: MediaQuery.of(context).size.width - 20,
-                        color: Colors.yellow.shade600,
-                        child: const Text(
-                          '5',
-                          style: TextStyle(
-                            fontSize: 25,
+                        const SizedBox(height: 16),
+                        Container(
+                          alignment: Alignment.center,
+                          height: 80,
+                          width: MediaQuery.of(context).size.width - 20,
+                          color: Colors.yellow.shade600,
+                          child: const Text(
+                            '5',
+                            style: TextStyle(
+                              fontSize: 25,
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
-            )),
+            ),
             Expanded(
                 child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
