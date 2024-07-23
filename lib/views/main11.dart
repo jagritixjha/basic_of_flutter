@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(const BasicWidgets());
-}
-
 class BasicWidgets extends StatefulWidget {
   const BasicWidgets({super.key});
 

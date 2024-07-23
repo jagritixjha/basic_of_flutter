@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Scaffold(
+class Main05 extends StatelessWidget {
+  const Main05({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title:
             const Text('My RNW', style: TextStyle(fontWeight: FontWeight.bold)),
@@ -31,6 +33,6 @@ void main() {
           ]),
         ),
       ),
-    ),
-  ));
+    );
+  }
 }

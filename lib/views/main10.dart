@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  return runApp(
-    const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-    ),
-  );
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Screen10 extends StatelessWidget {
+  const Screen10({super.key});
 
   @override
   Widget build(BuildContext context) {
