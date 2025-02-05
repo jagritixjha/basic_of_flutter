@@ -13,6 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool showLifecycleDemo = true;
+  int counter = 0; // Property to trigger didUpdateWidget
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,18 @@ class _MyAppState extends State<MyApp> {
               },
               child: Text(showLifecycleDemo ? "Remove Widget" : "Show Widget"),
             ),
-            if (showLifecycleDemo) const LifecycleDemo(key: ValueKey(1)),
+            const SizedBox(
+              height: 24,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  counter++; // Updating counter to trigger didUpdateWidget
+                });
+              },
+              child: Text("Update Property ($counter)"),
+            ),
+            if (showLifecycleDemo) LifecycleDemo(counter: counter),
           ],
         ),
       ),
@@ -40,7 +52,9 @@ class _MyAppState extends State<MyApp> {
 }
 
 class LifecycleDemo extends StatefulWidget {
-  const LifecycleDemo({super.key});
+  final int counter;
+
+  const LifecycleDemo({super.key, required this.counter});
 
   @override
   State<LifecycleDemo> createState() => _LifecycleDemoState();
@@ -49,51 +63,50 @@ class LifecycleDemo extends StatefulWidget {
 class _LifecycleDemoState extends State<LifecycleDemo> {
   String text = "Hello, Flutter!";
 
-  // Called when the widget is first created
   @override
   void initState() {
     super.initState();
-    debugPrint("1️⃣ initState() called");
+    debugPrint("🔵 1️⃣ initState() - Widget Created");
   }
 
-  // Called when dependencies change (e.g., InheritedWidget updates)
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    debugPrint("2️⃣ didChangeDependencies() called");
+    debugPrint("🟡 2️⃣ didChangeDependencies() - Dependencies Changed");
   }
 
-  // Called when the parent widget updates properties
   @override
   void didUpdateWidget(covariant LifecycleDemo oldWidget) {
     super.didUpdateWidget(oldWidget);
-    debugPrint("3️⃣ didUpdateWidget() called");
+    debugPrint(
+        "🟠 3️⃣ didUpdateWidget() - Parent Updated Property: ${oldWidget.counter} → ${widget.counter}");
   }
 
-  // Called when the widget is removed but may reappear
   @override
   void deactivate() {
     super.deactivate();
-    debugPrint("4️⃣ deactivate() called");
+    debugPrint("🟣 4️⃣ deactivate() - Widget Removed from Tree");
   }
 
-  // Called before the widget is permanently destroyed
   @override
   void dispose() {
-    debugPrint("5️⃣ dispose() called");
+    debugPrint("🔴 5️⃣ dispose() - Widget Destroyed");
     super.dispose();
   }
 
-  // Builds the UI (called every time `setState()` is triggered)
   @override
   Widget build(BuildContext context) {
-    debugPrint("🔥 build() called");
+    debugPrint("🔥 build() - UI Built/Updated");
 
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(text, style: const TextStyle(fontSize: 20)),
+          const SizedBox(
+            height: 16,
+          ),
+          Text("Counter: ${widget.counter}",
+              style: const TextStyle(fontSize: 20)),
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
