@@ -11,7 +11,7 @@ class DateTimePicker extends StatefulWidget {
 
 class _DateTimePickerState extends State<DateTimePicker> {
   DateTime date = DateTime.now();
-  TimeOfDay? time = TimeOfDay.now();
+  TimeOfDay time = TimeOfDay.now();
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class _DateTimePickerState extends State<DateTimePicker> {
               final DateTime? pickedDate = await showDialog<DateTime>(
                 context: context,
                 builder: (context) => DatePickerDialog(
-                  initialDate: date,
+                  initialDate: DateTime.now(),
                   firstDate: DateTime(2023),
-                  lastDate: DateTime(2025),
+                  lastDate: DateTime(2030),
                   currentDate: DateTime.now(),
                   initialCalendarMode: DatePickerMode.day,
                 ),
@@ -44,15 +44,15 @@ class _DateTimePickerState extends State<DateTimePicker> {
           Text('${date.day}'),
           ElevatedButton(
             onPressed: () async {
-              time = await showTimePicker(
+              time = (await showTimePicker(
                 context: context,
                 initialTime: TimeOfDay.now(),
-              );
+              ))!;
               setState(() {});
             },
             child: Text('TimePicker'),
           ),
-          Text('${time!.hour}:${time!.minute}'),
+          Text('${time.hour}:${time.minute}'),
         ],
       ),
     );
